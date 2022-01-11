@@ -3758,8 +3758,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9266edfa6e1ce469079944c995fb4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coin: {fileID: 5460258144242941161, guid: 087532febf669194a8ac5451849425f0, type: 3}
+  _coin: {fileID: 8611573084531736007, guid: 087532febf669194a8ac5451849425f0, type: 3}
   _spawners: {fileID: 905136891}
+  _coinCount: {fileID: 515427584}
 --- !u!4 &905136891
 Transform:
   m_ObjectHideFlags: 0

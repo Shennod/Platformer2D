@@ -1,11 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CoinSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _coin;
+    [SerializeField] private Coin _coin;
     [SerializeField] private Transform _spawners;
+    [SerializeField] private CoinCount _coinCount;
 
     private Transform[] _points;
 
@@ -25,7 +25,8 @@ public class CoinSpawner : MonoBehaviour
     {       
         for (int i = 0; i < _points.Length; i++)
         {
-            Instantiate(_coin, _points[i].position, Quaternion.identity);
+            var spawnedCoin =  Instantiate(_coin, _points[i].position, Quaternion.identity);
+            spawnedCoin.Init(_coinCount);
             yield return null;
         }
     }
